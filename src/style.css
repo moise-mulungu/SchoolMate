@@ -1,0 +1,55 @@
+.animated-text {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 0.15em solid orange;
+  animation:
+    typing 4s steps(40, end),
+    blink-caret 0.75s step-end infinite;
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: #4b16c5;
+  max-width: 90%;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .animated-text {
+    font-size: 1.2rem;
+    max-width: 80%;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: transparent;
+  }
+}
+
+.custom-width {
+  width: 6.25%; /* This is 1/8th of the parent container's width */
+}
+
+.text-color {
+  color: blue;
+}
+
+.logout-text {
+  color: red;
+}
